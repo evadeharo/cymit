@@ -2,6 +2,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./EmblaButtons";
 import { Product } from "../services/products";
 import ProductCard from "./ProductCard";
+import AppearAnimation from "./AppearAnimation";
 
 type Props = {
   items: Product[];
@@ -21,7 +22,11 @@ export default function EmblaSlider({ items, title }: Props) {
   return (
     <section className="relative flex flex-col gap-8 overflow-hidden p-12">
       <div className="flex justify-between items-center">
-        {title && <h2 className="font-bold text-[2rem]">{title}</h2>}
+        {title && (
+          <AppearAnimation>
+            <h2 className="h2Styles">{title}</h2>
+          </AppearAnimation>
+        )}
 
         <div className="flex justify-center gap-4">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />

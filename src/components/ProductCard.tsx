@@ -13,7 +13,7 @@ export default function ProductCard({ product }: Props) {
         aria-label={`Navigate to: ${product.title}`}
         className="flex"
       >
-        <div className="w-1/2">
+        <div className="w-1/2 aspect-square">
           {product.images[0] && (
             <img
               src={product.images[0]}
