@@ -1,4 +1,11 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+  useMemo,
+} from "react";
 import { fetchProducts, Product } from "../services/products";
 
 interface ProductContextValue {
@@ -7,7 +14,9 @@ interface ProductContextValue {
   error: string | null;
 }
 
-const ProductContext = createContext<ProductContextValue | undefined>(undefined);
+const ProductContext = createContext<ProductContextValue | undefined>(
+  undefined
+);
 
 export function ProductProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>([]);
@@ -26,15 +35,23 @@ export function ProductProvider({ children }: { children: ReactNode }) {
       });
   }, []);
 
+  const value = useMemo(
+    () => ({
+      products,
+      loading,
+      error,
+    }),
+    [products, loading, error]
+  );
+
   return (
-    <ProductContext.Provider value={{ products, loading, error }}>
-      {children}
-    </ProductContext.Provider>
+    <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
   );
 }
 
 export function useProducts() {
   const context = useContext(ProductContext);
-  if (!context) throw new Error("useProducts must be used within a ProductProvider");
+  if (!context)
+    throw new Error("useProducts must be used within a ProductProvider");
   return context;
 }
