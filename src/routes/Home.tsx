@@ -20,7 +20,7 @@ export function Home() {
     <>
       <Layout>
         <AppearAnimation>
-            <h1 className="text-[3rem] leading-tight font-bold w-1/2 m-auto text-center">
+            <h1 className="text-[2rem] lg:text-[3rem] leading-tight font-bold lg:w-1/2 m-auto text-center pt-24">
             Explora nuestra colección de productos cosméticos
             </h1>
         </AppearAnimation>

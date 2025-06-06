@@ -46,7 +46,7 @@ export const usePrevNextButtons = (
 type PropType = ComponentPropsWithRef<"button">;
 
 const baseButtonClass =
-  "w-10 h-10 p-2 bg-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition hover:bg-gray-100";
+  "w-8 lg:w-10 h-8 lg:h-10 p-2 bg-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition hover:bg-gray-100";
 
 const iconClass = "w-full h-full text-gray-800";
 

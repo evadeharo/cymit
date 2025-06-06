@@ -9,12 +9,12 @@ function ProductHeader({ title, brand }: { title: string; brand: string }) {
   return (
     <div className="flex flex-col gap-4">
       <AppearAnimation>
-        <h1 className="text-[3rem] leading-tight font-bold w-2/3 m-auto text-center">
+        <h1 className="text-[2rem] lg:text-[3rem] leading-tight font-bold lg:w-2/3 m-auto text-center pt-24">
           {title}
         </h1>
       </AppearAnimation>
       <AppearAnimation>
-        <h2 className="text-[2rem] leading-tight font-light w-1/2 m-auto text-center">
+        <h2 className="text-[1.6rem] lg:text-[2rem] leading-tight font-light lg:w-1/2 m-auto text-center">
           {brand}
         </h2>
       </AppearAnimation>
@@ -24,8 +24,8 @@ function ProductHeader({ title, brand }: { title: string; brand: string }) {
 
 function ProductMeta({ product }: { product: any }) {
   return (
-    <div className="flex justify-between">
-      <div className="w-[40%] aspect-square rounded-2xl border border-gray">
+    <div className="flex flex-col lg:flex-row justify-between">
+      <div className="lg:w-[40%] aspect-square rounded-2xl border border-gray">
         <img
           src={product.images?.[0]}
           alt={product.title}
@@ -33,16 +33,16 @@ function ProductMeta({ product }: { product: any }) {
         />
       </div>
 
-      <div className="w-[55%] flex flex-col justify-between gap-6">
-        <div className="flex flex-col gap-6">
+      <div className="lg:w-[55%] flex flex-col justify-between gap-6 pt-8 lg:pt-0">
+        <div className="flex flex-col gap-8 lg:gap-6">
           <div className="flex flex-col gap-3">
             <AppearAnimation>
               <h2 className="h2Styles">Know more about this product</h2>
             </AppearAnimation>
-            <p className="text-[1rem] w-[80%]">{product.description}</p>
+            <p className="text-[1rem] lg:w-[80%]">{product.description}</p>
           </div>
 
-          <div className="flex gap-20">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-20">
             <div className="flex flex-col gap-3 max-w-1/2">
               <AppearAnimation>
                 <h2 className="h2Styles">Category</h2>
@@ -101,7 +101,7 @@ function ProductMeta({ product }: { product: any }) {
 
 function ReviewCard({ review }: { review: any }) {
   return (
-    <div className="w-[32%] rounded-2xl border border-gray p-4">
+    <div className="w-full lg:w-[32%] rounded-2xl border border-gray p-4">
       <div className="w-full flex justify-between gap-4">
         <span className="text-[1rem] font-bold">{review.reviewerName}</span>
         <div className="flex gap-2">

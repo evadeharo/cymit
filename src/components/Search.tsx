@@ -25,22 +25,22 @@ export default function Search({ products }: Props) {
   };
 
   return (
-    <div className="flex flex-col gap-6 py-12">
+    <div className="flex flex-col gap-6 py-6 lg:py-12">
       <AppearAnimation>
         <h2 className="h2Styles px-12 text-center">Encuentra lo que buscas</h2>
       </AppearAnimation>
 
-      <div className="flex justify-center gap-4 items-center pb-10">
+      <div className="flex justify-center gap-4 items-center lg:pb-10">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Buscar por nombre..."
-          className="px-4 py-2 border border-gray rounded-full w-full max-w-md h-12"
+          className="px-4 py-2 border border-gray rounded-full w-full max-w-[70vw] lg:max-w-md h-10 lg:h-12"
         />
         <button
           onClick={handleSearch}
-          className="h-12 aspect-square grid place-items-center border border-gray text-black hover:bg-gray p-2 rounded-full hover:bg-gray-800"
+          className="h-10 lg:h-12 aspect-square grid place-items-center border border-gray text-black hover:bg-gray p-2 rounded-full hover:bg-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

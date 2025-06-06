@@ -20,7 +20,7 @@ export default function EmblaSlider({ items, title }: Props) {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="relative flex flex-col gap-8 overflow-hidden p-12">
+    <section className="relative flex flex-col gap-6 lg:gap-8 overflow-hidden p-6 lg:p-12">
       <div className="flex justify-between items-center">
         {title && (
           <AppearAnimation>
@@ -36,7 +36,7 @@ export default function EmblaSlider({ items, title }: Props) {
       <div className="w-full" ref={emblaRef}>
         <ul className="flex gap-6">
           {items.map((product) => (
-            <li key={product.id} className="flex-[0_0_30%]">
+            <li key={product.id} className="flex-[0_0_70%] md:lex-[0_0_40%] lg:flex-[0_0_30%]">
               <ProductCard product={product} />
             </li>
           ))}
