@@ -37,7 +37,7 @@ function ProductMeta({ product }: { product: any }) {
         <div className="flex flex-col gap-8 lg:gap-6">
           <div className="flex flex-col gap-3">
             <AppearAnimation>
-              <h2 className="h2Styles">Know more about this product</h2>
+              <h2 className="h2Styles">Conoce más sobre este producto</h2>
             </AppearAnimation>
             <p className="text-[1rem] lg:w-[80%]">{product.description}</p>
           </div>
@@ -45,7 +45,7 @@ function ProductMeta({ product }: { product: any }) {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-20">
             <div className="flex flex-col gap-3 max-w-1/2">
               <AppearAnimation>
-                <h2 className="h2Styles">Category</h2>
+                <h2 className="h2Styles">Categoría</h2>
               </AppearAnimation>
               <p className="text-[1rem] px-3 py-1 capitalize border border-gray rounded-full w-max">
                 {product.category}

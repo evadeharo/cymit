@@ -25,7 +25,7 @@ export default function Search({ products }: Props) {
   };
 
   return (
-    <div className="flex flex-col gap-6 py-6 lg:py-12">
+    <div className="flex flex-col gap-6 pt-6 lg:pt-12">
       <AppearAnimation>
         <h2 className="h2Styles px-12 text-center">Encuentra lo que buscas</h2>
       </AppearAnimation>
