@@ -12,7 +12,6 @@ export default {
   theme: {
     screens,
     colors: {
-      accent: "#fefe00",
       gray: {
         DEFAULT: "#E2E2E2",
         secondary: "#D9D9D9"
